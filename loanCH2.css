@@ -1,0 +1,44 @@
+body {
+    font-family: Impact, Helvetica, sans-serif;
+    background: #431f82;
+}
+
+#content {
+    width: 600px;
+    margin: 10px auto;
+    padding: 5px 20px;
+    background: #655f6e;
+    border: 1px solid #000000;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	color: #e4e1e8;
+	font-weight: bold;
+	text-align: center;
+}
+
+label {
+    display: block;
+    width: 20em;
+    text-align: right;
+    padding-right: 1em;
+    float: left;
+}
+
+input {
+    display: block;
+    float: left;
+    width: 80px;
+}
+
+#futureValue {
+    color: #8b49fc;
+}
+
+br {
+    clear: left;
+}
