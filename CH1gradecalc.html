@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Jonathan's Uber Simple Grade Calculator</title>
+    <script>
+        var $ = function (id) 
+{
+    return document.getElementById(id);
+}
+var mainProgram = function () 
+{
+var intGradeOption, floatTotalPts, floatHwPts, floatMidPts, floatFinPts, stringFinalGrade;
+
+floatHwPts = parseFloat(prompt("Please enter final HW pts (0-30):"));
+
+floatMidPts = parseFloat(prompt("Please enter Midterm Exam pts (0-35):"));
+
+floatFinPts = parseFloat(prompt("Please enter Final Exam pts (0-35):"));
+
+floatTotalPts = parseFloat(floatHwPts + floatMidPts + floatFinPts);
+
+intGradeOption = prompt("Would you like to receive your grade in a binary \(pass/fail\) fashion?\n'Yes' or 'No'?");
+
+if (intGradeOption==="Yes" || intGradeOption==="yes")
+{
+    if(floatTotalPts >= 80)
+    {
+        stringFinalGrade = "Pass";
+    }
+    else {
+        stringFinalGrade = "Fail";
+    }
+}
+else
+{
+    if (floatTotalPts >=90)
+    {
+        stringFinalGrade = "A";
+    }
+         else if (floatTotalPts >=80 && floatTotalPts<90)
+         {
+            stringFinalGrade = "B";
+         }
+            else if (floatTotalPts >=70 && floatTotalPts<80)
+            {
+                stringFinalGrade = "C";
+            }
+                else if (floatTotalPts >=60 && floatTotalPts<70)
+                {
+                    stringFinalGrade = "D";
+                }
+                    else
+                    {
+                        stringFinalGrade = "F";
+                    }
+}
+
+
+
+
+
+alert("Your final grade is: " +stringFinalGrade);
+}
+
+window.onload = function () 
+{
+    $("click").onclick = mainProgram;
+    $("item_cost").focus(); //puts the cursor on the first DOM text input box
+}
+        
+    </script>
+</head>
+
+<body>
+    <h1 align="center">Jonathan's Great Grade Calculator</h1>
+   
+	<div style="text-align:center">  
+        <input type="button" id="click" value="Click to begin"/>  
+    </div>  
+    <br>
+</body>
+</html>
