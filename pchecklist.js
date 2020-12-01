@@ -24,7 +24,7 @@ var passwordCheckOld = function ()
    
    //checks that that the password is longer than 8 characters
     
-    if (stringPasswordTest.length <=8)
+    if (stringPasswordTest.length <8)
     {
         stringOutput= ("Sorry, this password is not secure. It must be at least 8 characters long. Try another one!");
     }
